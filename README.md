@@ -1,0 +1,4 @@
+- 👋 Hola soy @yegecali
+- 👀 Estoy interesado en el desarrollo web con tecnologias python(Django), javaScript(Angular, React), c#(.net core)
+- 🌱 Estoy aprendiendo tecnologias como c# con .net core, Dart(Flutter), React Native
+- 💞️ Estoy buscando colaborar con proyectos
