@@ -4,13 +4,13 @@ Soy Yemi Genderson Canchari Lizarbe, una persona con habilidades de desarrollo d
 
 # 🧑🏻‍💻 Mis Tecnologias
 
-* **Frontend**: Angular, NgRx, React, Redux 
-* **Backend**: Java, Spring Boot, Spring Security, Jpa, Hibernate, Thymeleaf, ModelMapper, Open Api(Swagger), C#, .net core, Entity Framework, 
-* **Database**: Postgres, Mysql, SqlServer, Oracle 11g, MongoDb
-* **DevOps**: Docker, Git
+* **Frontend**: Angular, NgRx, React, Redux, html, css, js, scss, material ui 
+* **Backend**: Java, Spring Boot, Spring Security, Spring Webflux, Spring Cloud, Jpa, Hibernate, Thymeleaf, Open Api(Swagger), microservices, RxJava, Jacoco, SpotBug  
+* **Database**: SqlServer, MongoDb, Redis
+* **DevOps**: Docker, Git, Kubernetes, Sonar, Jenkins, Hashicorp Vault, Zipkin, ELK, Dynatrice, Grafana
 * **Plataformas**: Linux, Windows
-* **Mobile**: Ionic, React Native
-* **Metodologias**: Scrum, Git Flow, Conventional Commit
+* **Mobile**: Kotlin
+* **Metodologias**: Scrum, kanbam, Jira, Trello 
 * **Idiomas**: Español, Ingles
 * **Cloud**: Heroku, Digital Oceans, Azure, Firebase, Vercel, Netifly
 
