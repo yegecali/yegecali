@@ -16,21 +16,22 @@
 * **Cloud**: Heroku, Digital Oceans, Azure, Firebase, Vercel, Netifly
 
 # 🎓 Languages and tools
-
-<img src="assets/tools/css-3.png"  height="50">
-<img src="assets/tools/html-5.png"  height="50">
-<img src="assets/tools/js.png"  height="50">
-<img src="assets/tools/angular.png"  height="50">
-<img src="assets/tools/ngrx.svg"  height="50">
-<img src="assets/tools/rxjs.png"  height="50">
-<img src="assets/tools/java.png"  height="50">
-<img src="assets/tools/spring_webflux_logo.png"  height="50">
-<img src="assets/tools/redis.png"  height="50">
-<img src="assets/tools/jenkins.png"  height="50">
-<img src="assets/tools/docker.png"  height="50">
-<img src="assets/tools/kube.png"  height="50">
-<img src="assets/tools/mongo.png"  height="50">
-<img src="assets/tools/sqlserver.svg"  height="50">
+<div style="display:flex; flex-wrap: wrap; justify-content: center">
+<img src="assets/tools/css-3.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/html-5.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/js.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/angular.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/ngrx.svg"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/rxjs.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/java.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/spring_webflux_logo.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/redis.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/jenkins.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/docker.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/kube.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/mongo.png"  height="50" style="margin: 2px 3px">
+<img src="assets/tools/sqlserver.svg"  height="50" style="margin: 2px 3px">
+</div>
 
 # 🚩 Investigando
 
@@ -39,8 +40,12 @@
 
 # 📞 Contactame
 
-[<img src="assets/social/facebook.png"  height="50">](https://www.facebook.com/yemigenderson.cancharilizarbe/)
+<div style="display:flex; flex-wrap: wrap; justify-content: center">
+
+[<img src="assets/social/facebook.png"  height="50" style="margin: 2px 3px">](https://www.facebook.com/yemigenderson.cancharilizarbe/)
 [<img src="assets/social/instagram.png"  height="50">](https://www.instagram.com/yegecali/)
 [<img src="assets/social/linkedin.png"  height="50">](www.linkedin.com/in/yemi-genderson-canchari-lizarbe)
 [<img src="assets/social/whatsapp.png"  height="50">](https://wa.me/939234511)
 [<img src="assets/social/web.png"  height="50">](https://portafolio-4e70e.web.app/#/)
+
+</div>
