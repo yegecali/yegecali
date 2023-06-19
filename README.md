@@ -6,16 +6,13 @@
   <img 
   src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" 
   alt="LinkedIn Badge"
-  link="#"
   />
   <img 
   src="https://img.shields.io/badge/Facebbok-blue?style=for-the-badge&logo=Facebook&logoColor=white" 
-  alt="Twitter Badge"
-  link="#"/>
+  alt="Twitter Badge"/>
     <img 
   src="https://img.shields.io/badge/Twitter-green?style=for-the-badge&logo=whatsapp&logoColor=white" 
   alt="Twitter Badge"
-  link="#"
   />
 </div>
 
