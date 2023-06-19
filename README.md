@@ -1,3 +1,24 @@
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/Ws6T5PN7wHv3cY8xy8/giphy.gif" width="400"/>
+</div>
+
+<div id="badges" align="center" >
+  <img 
+  src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" 
+  alt="LinkedIn Badge"
+  link="#"
+  />
+  <img 
+  src="https://img.shields.io/badge/Facebbok-blue?style=for-the-badge&logo=Facebook&logoColor=white" 
+  alt="Twitter Badge"
+  link="#"/>
+    <img 
+  src="https://img.shields.io/badge/Twitter-green?style=for-the-badge&logo=whatsapp&logoColor=white" 
+  alt="Twitter Badge"
+  link="#"
+  />
+</div>
+
 # 👋 **Hola Mundo**
 <p>
     <img align='right' src="assets/code.gif" width="220" height="120">
@@ -6,11 +27,11 @@
 
 # 🧑🏻‍💻 Mis Tecnologias
 * **Frontend**: Angular, NgRx, React, Redux, html, css, js, scss, material ui, webpack, pug, scss 
-* **Backend**: Java, Spring Boot, Spring Security, Spring Webflux, Spring Cloud, Jpa, Hibernate, Thymeleaf, Open Api(Swagger), microservices, RxJava, Jacoco, SpotBug, Mockito, Junit, Apache Kafka  
-* **Database**: SqlServer, MongoDb, Redis
+* **Backend**: Java, Spring Boot, Spring Security, Spring Webflux, Spring Cloud, Jpa, Hibernate, Thymeleaf, Open Api(Swagger), microservices, RxJava, Jacoco, SpotBug, Mockito, Junit, Apache Kafka, Scala, Apache spark
+* **Database**: SqlServer, MongoDb, Redis, Oracle
 * **DevOps**: Docker, Git, Kubernetes, Sonar, Jenkins, Hashicorp Vault, Zipkin, ELK, Dynatrice, Grafana
 * **Plataformas**: Linux, Windows
-* **Mobile**: Kotlin
+* **Mobile**: Kotlin, React Native
 * **Metodologias**: Scrum, kanbam, Jira, Trello 
 * **Idiomas**: Español, Ingles
 * **Cloud**: Heroku, Digital Oceans, Azure, Firebase, Vercel, Netifly
