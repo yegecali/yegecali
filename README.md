@@ -5,7 +5,7 @@
 
 <div id="badges" align="center" >
 
-[<img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>](www.linkedin.com/in/yemi-genderson-canchari-lizarbe)
+[<img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>](https://www.linkedin.com/in/yemi-genderson-canchari-lizarbe/)
 [<img src="https://img.shields.io/badge/Facebbok-blue?style=for-the-badge&logo=Facebook&logoColor=white" alt="Twitter Badge"/>](https://www.facebook.com/yemigenderson.cancharilizarbe/)
 [<img src="https://img.shields.io/badge/Whatsapp-green?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Twitter Badge"/>](https://wa.me/939234511)
 </div>
