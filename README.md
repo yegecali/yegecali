@@ -13,7 +13,7 @@
 # 👋 **Hola Mundo**
 <p>
     <img align='right' src="assets/code.gif" width="220" height="120">
-    Soy Yemi Genderson Canchari Lizarbe, una persona con habilidades de desarrollo de sistemas web, android, desktop con tecnologias que estan a la vanguardia y siempre de la mano con las buenas practicas usando patrones de diseño, manteniendo una arquitectura limpia
+    Soy Yemi Genderson Canchari Lizarbe, un apasionado desarrollador de sistemas web, Android y desktop, siempre a la vanguardia de las últimas tecnologías y comprometido con las mejores prácticas de desarrollo. Mi enfoque se centra en la implementación de patrones de diseño para mantener una arquitectura limpia y escalable en mis proyectos. Con habilidades versátiles en múltiples plataformas y un fuerte énfasis en la calidad del código, estoy constantemente buscando desafíos que me permitan seguir creciendo como desarrollador.
 </p>
 
 # 🧑🏻‍💻 Mis Tecnologias
