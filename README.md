@@ -63,7 +63,3 @@
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="50"/>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" height="50"/>          
 </div>
-
-# 🚩 Investigando
-
-Actualmente me encuentro investigando temas IA, Promps, Spark, Haddop, Big Data, hyperledger, Blockchain, Web3
