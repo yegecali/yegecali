@@ -3,63 +3,62 @@
   <img src="https://media.giphy.com/media/Ws6T5PN7wHv3cY8xy8/giphy.gif" width="400"/>
 </div>
 
-<div id="badges" align="center" >
-
-[<img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>](https://www.linkedin.com/in/yemi-genderson-canchari-lizarbe/)
-[<img src="https://img.shields.io/badge/Facebbok-blue?style=for-the-badge&logo=Facebook&logoColor=white" alt="Twitter Badge"/>](https://www.facebook.com/yemigenderson.cancharilizarbe/)
-[<img src="https://img.shields.io/badge/Whatsapp-green?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Twitter Badge"/>](https://wa.me/939234511)
-</div>
 
 # 👋 **Hola Mundo**
-<p>
-    <img align='right' src="assets/code.gif" width="220" height="120">
-    Soy Yemi Genderson Canchari Lizarbe, un apasionado desarrollador de sistemas web, Android y desktop, siempre a la vanguardia de las últimas tecnologías y comprometido con las mejores prácticas de desarrollo. Mi enfoque se centra en la implementación de patrones de diseño para mantener una arquitectura limpia y escalable en mis proyectos. Con habilidades versátiles en múltiples plataformas y un fuerte énfasis en la calidad del código, estoy constantemente buscando desafíos que me permitan seguir creciendo como desarrollador.
-</p>
 
-# 🧑🏻‍💻 Mis Tecnologias
-* **Frontend**: Angular, NgRx, React, Redux, html, css, js, scss, material ui, webpack, pug, scss 
-* **Backend**: Java, Spring Boot, Spring Security, Spring Webflux, Spring Cloud, Jpa, Hibernate, Thymeleaf, Open Api(Swagger), microservices, RxJava, Jacoco, SpotBug, Mockito, Junit, Apache Kafka, Scala, Apache spark
-* **Database**: SqlServer, MongoDb, Redis, Oracle
-* **DevOps**: Docker, Git, Kubernetes, Sonar, Jenkins, Hashicorp Vault, Zipkin, ELK, Dynatrice, Grafana
-* **Plataformas**: Linux, Windows
-* **Mobile**: Kotlin, React Native
-* **Metodologias**: Scrum, kanbam, Jira, Trello 
-* **Idiomas**: Español, Ingles
-* **Cloud**: Heroku, Digital Oceans, Azure, Firebase, Vercel, Netifly
+Hola 👋, bienvenido a mi perfil de GitHub. Soy un ingeniero de sistemas apasionado por el aprendizaje continuo, con experiencia en tecnologías de backend y aspiraciones de crecimiento profesional.
 
-# 🎓 Languages and tools
+## 👨‍💻 Acerca de mí
 
-<div align="center">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="50" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"  height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" height="50"/>    
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" height="50"/>
-</div>
-<br>
-<div align="center">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" height="50" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" height="50"/>          
-</div>
+- 🎓 **Especialización Técnica:** Java y Spring, enfocado en microservicios y tecnologías reactivas como RxJava y WebFlux.
+- 🚀 **Proyectos Actuales:** Trabajo en un entorno bancario bajo un modelo ágil (Scrum), gestionando microservicios y procesos automatizados.
+- 📚 **Aprendizaje:** Actualmente leyendo *Head First Design Patterns* y aprendiendo Python desde cero.
+
+---
+
+## 🛠️ Habilidades Técnicas
+
+### Lenguajes de Programación
+- **Backend:** Java, Python (aprendiendo)
+
+### Frameworks y Herramientas
+- **Java:** Spring Framework (Spring Boot, Spring WebFlux), Spring Cloud, Quarkus
+- **Automatización:** Jenkins, Git actions,
+- **Calidad de Código:** SonarQube, Fortify, CAST
+- **Metodologías:** Scrum
+- **DevOps:** GitHub, Git, Azure DevOps
+
+### Otros Conocimientos
+- Patrones de diseño (trabajando en su implementación eficiente).
+- Certificaciones deseadas:
+  - Java
+  - Azure DevOps
+  - GitHub Fundamentals
+
+---
+
+## 🌱 Proyectos Personales
+
+- **Automatización:** Flujo en Jira que ejecuta jobs en Jenkins y actualiza automáticamente tickets.
+- **Eventos:** Conexión local a tópicos para procesar eventos en tiempo real.
+
+---
+
+## 🏆 Metas de Aprendizaje y Crecimiento
+
+- Dominar Python y especializarme en su uso profesional.
+- Ampliar conocimientos en estructuración de datos, algoritmos y diseño orientado a objetos.
+- Mejorar en desarrollo funcional, programación segura, refactorización y pruebas con Mockito y BDD.
+- Perfeccionar habilidades de linting, revisiones de código y pair programming.
+
+---
+
+## 🛡️ Mi Filosofía de Trabajo
+
+- **Eficiencia:** Aplicar los principios SOLID y optimizar el uso de recursos.
+- **Calidad:** Priorizar buenas prácticas y patrones de diseño en cada proyecto.
+- **Colaboración:** Trabajar en equipo para crear soluciones escalables y robustas.
+
+---
+
+¡Gracias por visitar mi perfil! 💡
