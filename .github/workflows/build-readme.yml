@@ -1,0 +1,54 @@
+name: Build README
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".readme/**"
+      - ".github/workflows/build-readme.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-readme-main
+  cancel-in-progress: false
+
+jobs:
+  build-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install README build dependencies
+        run: python3 -m pip install -r .readme/requirements.txt
+
+      - name: Build README
+        run: python3 .readme/build_readme.py
+
+      - name: Commit generated README
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- README.md; then
+            echo "README.md is already up to date."
+            exit 0
+          fi
+
+          git add README.md
+          git commit -m "build: update generated readme [skip ci]"
+          git push -f origin HEAD:main

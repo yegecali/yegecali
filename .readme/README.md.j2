@@ -1,0 +1,50 @@
+<!--
+  README generado automaticamente con Jinja2 + Markdown.
+  Edita .readme/data.json o .readme/README.md.j2 y ejecuta:
+  python3 .readme/build_readme.py
+-->
+
+<p align="center">
+  <img src="{{ profile.hero_image }}" width="520" alt="Coding animation">
+</p>
+
+# Hola, soy {{ profile.name }}
+
+**{{ profile.role }}** | {{ profile.location }}
+
+> {{ profile.headline }}
+
+{{ profile.intro }}
+
+## Perfil técnico
+
+{{ highlights | md_list }}
+
+## Stack principal
+
+| Área | Tecnologías |
+| --- | --- |
+{% for group in stack -%}
+| **{{ group["title"] }}** | {{ group["items"] | md_badges }} |
+{% endfor %}
+
+## Proyectos y focos actuales
+
+{% for project in projects -%}
+### {{ project.name }}
+
+{{ project.description }}
+
+{% endfor -%}
+
+## Aprendizaje en progreso
+
+{{ learning_goals | md_list }}
+
+## Forma de trabajo
+
+{{ work_principles | md_list }}
+
+---
+
+{{ footer }}
