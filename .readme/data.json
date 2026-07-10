@@ -1,61 +1,118 @@
 {
   "profile": {
-    "name": "YegeCali",
-    "role": "Ingeniero de Sistemas",
-    "headline": "Backend engineer enfocado en Java, Spring y automatización de procesos.",
-    "location": "Perú",
+    "name": "Yemi Genderson",
+    "role": "Ingeniero de Software",
+    "location": "🇵🇪 Perú",
     "hero_image": "assets/code.gif",
-    "intro": "Bienvenido a mi perfil de GitHub. Trabajo construyendo soluciones backend mantenibles, integraciones entre plataformas y microservicios para entornos de alta exigencia. Me interesa escribir software claro, seguro y fácil de evolucionar."
+    "intro": "Diseño e implemento soluciones backend mantenibles, integro plataformas y automatizo procesos para equipos que necesitan software confiable, claro y fácil de evolucionar. Prefiero decisiones sustentadas en criterio de ingeniería, código limpio y mejora continua antes que soluciones sobrediseñadas."
   },
+  "typing": {
+    "font": "Fira Code",
+    "weight": 600,
+    "size": 24,
+    "duration": 3000,
+    "pause": 1000,
+    "color": "0E75B6",
+    "width": 600,
+    "lines": [
+      "⚙️ Backend engineer especializado en Java & Spring Boot",
+      "🧩 Microservicios · WebFlux · RxJava",
+      "🤖 Automatización de procesos y flujos técnicos",
+      "🐍 Aprendiendo Python todos los días"
+    ]
+  },
+  "socials": [
+    {"label": "GitHub", "url": "https://github.com/yegecali", "color": "181717", "logo": "github"},
+    {"label": "LinkedIn", "url": "https://www.linkedin.com/in/yemigenderson/", "color": "0A66C2", "logo": "linkedin"}
+  ],
   "highlights": [
-    "Especialización en Java, Spring Boot, Spring WebFlux y ecosistemas de microservicios.",
-    "Experiencia en entornos bancarios con Scrum, automatización y control de calidad.",
-    "Aprendizaje activo en Python, patrones de diseño, algoritmos y buenas prácticas de ingeniería.",
-    "Interés constante por DevOps, revisión de código, pruebas y mejora continua."
+    "🔧 Diseño y desarrollo de APIs, microservicios e integraciones con Java, Spring Boot y Spring WebFlux.",
+    "🤖 Automatización de flujos técnicos con foco en productividad, trazabilidad y reducción de trabajo manual.",
+    "🏦 Experiencia en entornos bancarios, trabajo con Scrum, revisión de código y herramientas de calidad.",
+    "📘 Aprendizaje constante en Python, algoritmos, patrones de diseño, seguridad y prácticas DevOps."
   ],
   "stack": [
     {
-      "title": "Backend",
-      "items": ["Java", "Spring Boot", "Spring WebFlux", "Spring Cloud", "Quarkus", "RxJava", "Python"]
+      "title": "💻 Backend",
+      "items": [
+        {"name": "Java", "color": "ED8B00", "logo": "openjdk"},
+        {"name": "Kotlin", "color": "0095D5", "logo": "kotlin"},
+        {"name": "Scala", "color": "DC322F", "logo": "scala"},
+        {"name": "Python", "color": "3776AB", "logo": "python"},
+        {"name": "Spring Boot", "color": "6DB33F", "logo": "spring-boot"},
+        {"name": "Spring WebFlux", "color": "6DB33F", "logo": "spring"},
+        {"name": "Spring Cloud", "color": "6DB33F", "logo": "spring"},
+        {"name": "Quarkus", "color": "4695EB", "logo": "quarkus"},
+        {"name": "RxJava", "color": "B7178C", "logo": "reactivex"}
+      ]
     },
     {
-      "title": "DevOps y automatización",
-      "items": ["GitHub Actions", "Git", "Azure DevOps", "Jenkins", "Jira"]
+      "title": "🎨 Frontend",
+      "items": [
+        {"name": "JavaScript", "color": "F7DF1E", "logo": "javascript", "logo_color": "black"},
+        {"name": "TypeScript", "color": "3178C6", "logo": "typescript"},
+        {"name": "React", "color": "61DAFB", "logo": "react", "logo_color": "black"},
+        {"name": "Redux", "color": "764ABC", "logo": "redux"},
+        {"name": "HTML5", "color": "E34F26", "logo": "html5"},
+        {"name": "CSS3", "color": "1572B6", "logo": "css"},
+        {"name": "Tailwind CSS", "color": "06B6D4", "logo": "tailwindcss"}
+      ]
     },
     {
-      "title": "Calidad y seguridad",
-      "items": ["SonarQube", "Fortify", "CAST", "Mockito", "BDD"]
+      "title": "🗄️ Bases de datos",
+      "items": [
+        {"name": "SQL Server", "color": "CC2927"},
+        {"name": "MongoDB", "color": "47A248", "logo": "mongodb"}
+      ]
     },
     {
-      "title": "Prácticas",
-      "items": ["Scrum", "SOLID", "Patrones de diseño", "Refactorización", "Pair programming"]
+      "title": "📨 Mensajería y arquitectura de eventos",
+      "items": [
+        {"name": "Apache Kafka", "color": "231F20", "logo": "apachekafka"},
+        {"name": "Event-Driven Architecture", "color": "8E44AD"},
+        {"name": "Saga Pattern", "color": "8E44AD"}
+      ]
+    },
+    {
+      "title": "☁️ Infraestructura y DevOps",
+      "items": [
+        {"name": "GitHub Actions", "color": "2088FF", "logo": "github-actions"},
+        {"name": "Git", "color": "F05032", "logo": "git"},
+        {"name": "Azure DevOps", "color": "0078D7", "logo": "azure-devops"},
+        {"name": "Azure Data Factory", "color": "0078D4"},
+        {"name": "Jenkins", "color": "D24939", "logo": "jenkins"},
+        {"name": "Jira", "color": "0052CC", "logo": "jira"},
+        {"name": "Proxmox", "color": "E57000", "logo": "proxmox"}
+      ]
+    },
+    {
+      "title": "📊 Observabilidad",
+      "items": [
+        {"name": "Grafana", "color": "F46800", "logo": "grafana"},
+        {"name": "Loki", "color": "F5A623"},
+        {"name": "Kibana", "color": "005571", "logo": "kibana"}
+      ]
+    },
+    {
+      "title": "🔍 Calidad y seguridad",
+      "items": [
+        {"name": "SonarQube", "color": "4E9BCD", "logo": "sonarqube"},
+        {"name": "Fortify", "color": "445566"},
+        {"name": "CAST", "color": "445566"},
+        {"name": "Mockito", "color": "445566"},
+        {"name": "BDD", "color": "445566"}
+      ]
+    },
+    {
+      "title": "🧩 Prácticas",
+      "items": [
+        {"name": "Scrum", "color": "5C6BC0"},
+        {"name": "SOLID", "color": "5C6BC0"},
+        {"name": "Patrones de diseño", "color": "5C6BC0"},
+        {"name": "Refactorización", "color": "5C6BC0"},
+        {"name": "Pair programming", "color": "5C6BC0"}
+      ]
     }
   ],
-  "projects": [
-    {
-      "name": "Automatización Jira + Jenkins",
-      "description": "Flujo que conecta tickets con ejecución de jobs y actualización automática de estados."
-    },
-    {
-      "name": "Procesamiento de eventos",
-      "description": "Conexión local a tópicos para validar y procesar eventos en tiempo real."
-    },
-    {
-      "name": "Generador de README",
-      "description": "Pipeline con Python, JSON y plantillas para publicar este perfil desde una fuente versionada."
-    }
-  ],
-  "learning_goals": [
-    "Dominar Python para automatización, scripting y desarrollo profesional.",
-    "Reforzar estructuras de datos, algoritmos y diseño orientado a objetos.",
-    "Profundizar en programación funcional, pruebas, seguridad y refactorización.",
-    "Prepararme para certificaciones en Java, Azure DevOps y GitHub Fundamentals."
-  ],
-  "work_principles": [
-    "Eficiencia: aplicar SOLID y optimizar el uso de recursos sin perder claridad.",
-    "Calidad: diseñar soluciones mantenibles, testeables y fáciles de revisar.",
-    "Colaboración: construir en equipo con comunicación clara y foco en resultados.",
-    "Aprendizaje: convertir cada proyecto en una oportunidad para mejorar criterio técnico."
-  ],
-  "footer": "Gracias por visitar mi perfil. Siempre estoy aprendiendo, construyendo y refinando mi forma de crear software."
+  "footer": "🙌 Gracias por visitar mi perfil. Estoy construyendo, aprendiendo y refinando mi forma de crear software con criterio."
 }

@@ -4,16 +4,13 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
-    paths:
-      - ".readme/**"
-      - ".github/workflows/build-readme.yml"
+      - develop
 
 permissions:
   contents: write
 
 concurrency:
-  group: build-readme-main
+  group: build-readme
   cancel-in-progress: false
 
 jobs:
@@ -21,10 +18,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: main
           fetch-depth: 0
           persist-credentials: true
 
@@ -39,16 +35,28 @@ jobs:
       - name: Build README
         run: python3 .readme/build_readme.py
 
-      - name: Commit generated README
+      - name: Commit generated README to main branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          # 1. Save the generated README.md to a temporary location
+          cp README.md /tmp/README.md
+
+          # 2. Switch to main branch and ensure it is up to date
+          git checkout main
+          git pull origin main --rebase
+
+          # 3. Restore the generated README.md
+          cp /tmp/README.md README.md
+
+          # 4. Check if README.md has any changes to be committed
           if git diff --quiet -- README.md; then
-            echo "README.md is already up to date."
+            echo "README.md is already up to date on main."
             exit 0
           fi
 
+          # 5. Commit and push to main branch
           git add README.md
           git commit -m "build: update generated readme [skip ci]"
-          git push -f origin HEAD:main
+          git push origin main

@@ -8,43 +8,35 @@
   <img src="{{ profile.hero_image }}" width="520" alt="Coding animation">
 </p>
 
-# Hola, soy {{ profile.name }}
+<h1 align="center">👋 Hola, soy {{ profile.name }}</h1>
 
-**{{ profile.role }}** | {{ profile.location }}
+<p align="center">
+  <strong>{{ profile.role }}</strong> · {{ profile.location }}
+</p>
 
-> {{ profile.headline }}
+<p align="center">
+  {{ socials | md_social_badges }}
+</p>
+
+<p align="center">
+  <img src="{{ typing | typing_svg_url }}" alt="Typing SVG">
+</p>
 
 {{ profile.intro }}
 
-## Perfil técnico
+## 🎯 En qué estoy enfocado
 
 {{ highlights | md_list }}
 
-## Stack principal
+## 🧰 Stack principal
 
-| Área | Tecnologías |
-| --- | --- |
-{% for group in stack -%}
-| **{{ group["title"] }}** | {{ group["items"] | md_badges }} |
-{% endfor %}
+{% for group in stack %}
+### {{ group["title"] }}
 
-## Proyectos y focos actuales
-
-{% for project in projects -%}
-### {{ project.name }}
-
-{{ project.description }}
+{{ group["items"] | md_badges }}
 
 {% endfor -%}
 
-## Aprendizaje en progreso
-
-{{ learning_goals | md_list }}
-
-## Forma de trabajo
-
-{{ work_principles | md_list }}
-
 ---
 
-{{ footer }}
+<p align="center">{{ footer }}</p>
