@@ -46,6 +46,10 @@
   },
   "navigation": [
     {
+      "id": "experience",
+      "labelKey": "experience"
+    },
+    {
       "id": "projects",
       "labelKey": "projects"
     },
@@ -83,16 +87,19 @@
       "marker": "01 — CONNECT"
     },
     "projects": {
-      "marker": "02 — BUILD"
+      "marker": "03 — BUILD"
     },
     "skills": {
-      "marker": "03 — TOOLKIT"
+      "marker": "04 — TOOLKIT"
     },
     "about": {
-      "marker": "04 — HUMAN"
+      "marker": "05 — HUMAN"
     },
     "contact": {
       "eyebrow": "LET’S MAKE IT HAPPEN"
+    },
+    "experience": {
+      "marker": "02 — EXPERIENCE"
     }
   },
   "projectFilters": [
@@ -194,7 +201,11 @@
         "Spring WebFlux",
         "RxJava",
         "Quarkus",
-        "Python"
+        "Python",
+        "Java 17+",
+        "Spring Cloud",
+        "Project Reactor",
+        "Reactive Streams"
       ],
       "id": "backend",
       "icon": "code"
@@ -207,7 +218,10 @@
         "Event-Driven",
         "CQRS",
         "Saga",
-        "Outbox"
+        "Outbox",
+        "API-first",
+        "OpenAPI 3.x",
+        "Resilience4j"
       ],
       "id": "architecture",
       "icon": "layers"
@@ -219,7 +233,13 @@
         "Azure Functions",
         "GitHub Actions",
         "Docker",
-        "Jenkins"
+        "Jenkins",
+        "Azure APIM",
+        "Azure AKS",
+        "GitOps",
+        "Terraform",
+        "Azure Data Factory",
+        "Databricks"
       ],
       "id": "cloud",
       "icon": "cloud"
@@ -243,7 +263,16 @@
         "Mockito",
         "Karate",
         "SonarQube",
-        "OAuth 2.0"
+        "OAuth 2.0",
+        "OWASP Top 10",
+        "PCI-DSS",
+        "Cornucopia",
+        "Fortify SAST",
+        "JFrog Xray",
+        "JMeter",
+        "k6",
+        "WireMock",
+        "HashiCorp Vault"
       ],
       "id": "quality",
       "icon": "shield"
@@ -255,7 +284,10 @@
         "Grafana",
         "Prometheus",
         "Kibana",
-        "Loki"
+        "Loki",
+        "Application Insights",
+        "Micrometer",
+        "Distributed Tracing"
       ],
       "id": "observability",
       "icon": "activity"
@@ -321,7 +353,17 @@
       "navigationLabel": "Navegación principal",
       "filterLabel": "Filtrar proyectos",
       "portraitLabel": "Monograma de {name}",
-      "aboutText": "Soy ingeniero de software con experiencia en sistemas críticos del sector bancario. Trabajo con Java, Spring Boot, programación reactiva, arquitectura orientada a eventos y tecnologías cloud. Priorizo decisiones técnicas justificadas, código claro y mejora continua."
+      "aboutText": "Soy ingeniero de sistemas y Software Engineer Backend, con experiencia en BCP y NTT DATA LATAM. Diseño microservicios reactivos de alta concurrencia con Java, Spring Cloud, Spring WebFlux, RxJava y Quarkus en Azure. Integro seguridad bancaria, DevSecOps, observabilidad y pruebas de rendimiento para construir servicios confiables.",
+      "experience": "Experiencia",
+      "experienceLabel": "TRAYECTORIA PROFESIONAL",
+      "experienceTitle": "Backend en el mundo real.",
+      "experienceDescription": "Microservicios, identidad digital y cloud en entornos bancarios.",
+      "present": "Actualidad",
+      "experienceDetails": "Responsabilidades y tecnología",
+      "experienceProject": "Proyecto destacado",
+      "experienceRecognition": "Reconocimientos",
+      "educationLabel": "FORMACIÓN",
+      "educationDegree": "Ingeniería de Sistemas"
     },
     "en": {
       "tag": "Software engineering · Peru",
@@ -382,7 +424,17 @@
       "navigationLabel": "Main navigation",
       "filterLabel": "Filter projects",
       "portraitLabel": "Monogram of {name}",
-      "aboutText": "I'm a software engineer with experience in mission-critical banking systems. I work with Java, Spring Boot, reactive programming, event-driven architecture and cloud technologies. I value justified technical decisions, clear code and continuous improvement."
+      "aboutText": "I am a systems engineer and backend software engineer with experience at BCP and NTT DATA LATAM. I design highly concurrent reactive microservices with Java, Spring Cloud, Spring WebFlux, RxJava and Quarkus on Azure. I combine banking security, DevSecOps, observability and performance testing to build reliable services.",
+      "experience": "Experience",
+      "experienceLabel": "PROFESSIONAL JOURNEY",
+      "experienceTitle": "Backend in the real world.",
+      "experienceDescription": "Microservices, digital identity and cloud in banking environments.",
+      "present": "Present",
+      "experienceDetails": "Responsibilities and technology",
+      "experienceProject": "Featured project",
+      "experienceRecognition": "Recognition",
+      "educationLabel": "EDUCATION",
+      "educationDegree": "Systems Engineering"
     }
   },
   "effects": {
@@ -469,5 +521,131 @@
       "floatDuration": 1800,
       "floatCycles": 3
     }
+  },
+  "experience": [
+    {
+      "id": "bcp",
+      "company": "Banco de Crédito del Perú",
+      "initials": "BCP",
+      "startYear": "2024",
+      "endYear": null,
+      "location": "Lima, Perú",
+      "role": "Software Engineer Backend",
+      "tags": [
+        "Java 17+",
+        "Spring WebFlux",
+        "RxJava",
+        "Quarkus",
+        "Azure APIM"
+      ],
+      "content": {
+        "es": {
+          "summary": "Microservicios reactivos y autenticación de identidad digital para canales bancarios, con foco en alta concurrencia, seguridad y disponibilidad.",
+          "highlights": [
+            "Desarrollo de servicios con I/O no bloqueante y gestión eficiente de hilos en Java 17+, Spring WebFlux, RxJava y Quarkus.",
+            "Validación de rendimiento con JMeter y k6, analizando percentiles P95 y P99 para asegurar la estabilidad de los servicios.",
+            "Controles OWASP Top 10 y PCI-DSS; modelado de amenazas con Cornucopia y atención de vulnerabilidades de Ethical Hacking e IriusRisk.",
+            "Contratos API-first con OpenAPI 3.x, publicación en Azure API Management y políticas de rate limit, timeouts y subscription keys."
+          ],
+          "details": [
+            "Análisis estático y de dependencias con Fortify SAST, SonarQube, JFrog Xray y CAST.",
+            "Pipelines en GitHub Actions para automatizar validaciones de despliegue.",
+            "Configuración de GitHub Copilot y agentes LLM personalizados para aplicar estándares de código y nomenclatura.",
+            "Diagnóstico de incidentes de producción con Grafana y Kibana.",
+            "Azure Functions para procesamiento asíncrono y participación en revisiones de arquitectura de soluciones."
+          ],
+          "projectTitle": "Login Único BCP",
+          "projectDescription": "Servicios de autenticación cross-channel para 20 canales digitales del banco, con hasta 500 solicitudes por segundo en producción, alta disponibilidad y tolerancia a fallos. Autenticación con tarjeta y clave, RSA Token, reconocimiento facial y OTP; protección con CAPTCHA, WAF y Azure Front Door frente a DDoS.",
+          "recognition": [
+            "Ganador de una hackatón de Java con una solución basada en microservicios y arquitectura a gran escala.",
+            "Automatización de validaciones de servicios propios y de terceros a partir de tickets de soporte en ambientes preproductivos."
+          ]
+        },
+        "en": {
+          "summary": "Reactive microservices and digital identity authentication for banking channels, focused on high concurrency, security and availability.",
+          "highlights": [
+            "Non-blocking services and efficient thread management with Java 17+, Spring WebFlux, RxJava and Quarkus.",
+            "Performance validation with JMeter and k6, analyzing P95 and P99 percentiles to maintain service stability.",
+            "OWASP Top 10 and PCI-DSS controls; threat modeling with Cornucopia and remediation of Ethical Hacking and IriusRisk findings.",
+            "API-first contracts with OpenAPI 3.x, Azure API Management publishing, and rate limit, timeout and subscription key policies."
+          ],
+          "details": [
+            "Static and dependency analysis with Fortify SAST, SonarQube, JFrog Xray and CAST.",
+            "GitHub Actions pipelines to automate deployment validations.",
+            "GitHub Copilot and custom LLM agent configuration to apply coding and naming standards.",
+            "Production incident diagnosis with Grafana and Kibana.",
+            "Azure Functions for asynchronous processing and participation in solution architecture reviews."
+          ],
+          "projectTitle": "Login Único BCP",
+          "projectDescription": "Cross-channel authentication services for 20 digital banking channels, supporting up to 500 requests per second in production with high availability and fault tolerance. Card and PIN, RSA Token, facial recognition and OTP authentication; CAPTCHA, WAF and Azure Front Door for DDoS protection.",
+          "recognition": [
+            "Winner of a Java hackathon with a microservices solution and large-scale architecture.",
+            "Automated validation of internal and third-party services triggered by support tickets in preproduction environments."
+          ]
+        }
+      }
+    },
+    {
+      "id": "ntt-data",
+      "company": "NTT DATA LATAM",
+      "initials": "NTT",
+      "startYear": "2022",
+      "endYear": "2024",
+      "location": "Lima, Perú",
+      "role": "Java Developer",
+      "tags": [
+        "Spring Boot",
+        "Spring Cloud",
+        "Resilience4j",
+        "AKS",
+        "Dynatrace"
+      ],
+      "content": {
+        "es": {
+          "summary": "APIs resilientes, observabilidad y despliegues cloud, desde el diseño de contratos hasta la operación de microservicios.",
+          "highlights": [
+            "Diseño e implementación de APIs REST con Java, Spring Boot, Spring Cloud y Spring Cloud Gateway.",
+            "Circuit Breaker, Retry y Timeout con Resilience4j; mocking con WireMock para pruebas de integración.",
+            "Contratos API-first con OpenAPI 3.x bajo gobierno de APIs, manteniendo consistencia entre más de 15 microservicios.",
+            "Despliegues en Azure Kubernetes Service: Ingress NGINX, Horizontal Pod Autoscaling, resource quotas y estrategias GitOps."
+          ],
+          "details": [
+            "Dynatrace APM con dashboards personalizados, alertas y diagnóstico de incidentes.",
+            "Integración como cliente de HashiCorp Vault, con rotación automática de credenciales y eliminación de secretos en código.",
+            "Controles antifraude con CAPTCHA para reducir tráfico malicioso y proteger endpoints críticos."
+          ],
+          "projectTitle": "Migración de datos a Azure",
+          "projectDescription": "Participación reconocida en la migración de 20 millones de registros de usuarios desde una base de datos on-premise a cloud mediante un proceso ETL con Azure Data Factory y Databricks.",
+          "recognition": [
+            "Reconocimiento por la migración de datos de usuarios de on-premise a cloud."
+          ]
+        },
+        "en": {
+          "summary": "Resilient APIs, observability and cloud deployments, from contract design to microservice operations.",
+          "highlights": [
+            "REST API design and implementation with Java, Spring Boot, Spring Cloud and Spring Cloud Gateway.",
+            "Circuit Breaker, Retry and Timeout with Resilience4j; WireMock mocking for integration tests.",
+            "API-first contracts with OpenAPI 3.x under API governance, maintaining consistency across more than 15 microservices.",
+            "Azure Kubernetes Service deployments: NGINX Ingress, Horizontal Pod Autoscaling, resource quotas and GitOps strategies."
+          ],
+          "details": [
+            "Dynatrace APM with custom dashboards, alerts and incident diagnosis.",
+            "HashiCorp Vault client integration with automated credential rotation and removal of hardcoded secrets.",
+            "CAPTCHA-based antifraud controls to reduce malicious traffic and protect critical endpoints."
+          ],
+          "projectTitle": "Data migration to Azure",
+          "projectDescription": "Recognized contribution to migrating 20 million user records from an on-premise database to cloud through an ETL process with Azure Data Factory and Databricks.",
+          "recognition": [
+            "Recognition for migrating user data from on-premise to cloud."
+          ]
+        }
+      }
+    }
+  ],
+  "education": {
+    "institution": "Universidad Nacional de San Cristóbal de Huamanga",
+    "location": "Ayacucho, Huamanga",
+    "startYear": "2013",
+    "endYear": "2018"
   }
 }

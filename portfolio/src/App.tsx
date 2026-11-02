@@ -7,6 +7,7 @@ import ProfileSidebar from './components/ProfileSidebar'
 import Intro from './components/Intro'
 import Connections from './components/Connections'
 import Projects from './components/Projects'
+import Experience from './components/Experience'
 import Skills from './components/Skills'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -32,6 +33,7 @@ function PortfolioPage() {
         <div className="main-content">
           <Intro />
           <Connections />
+          <Experience />
           <Projects />
           <Skills />
           <About />

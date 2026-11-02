@@ -161,3 +161,12 @@ source commit and includes `portfolio.tar.gz` and `SHA256SUMS`. Releases are
 optional and are not marked as the latest release of the repository.
 The existing `PAGES_DEPLOY_TOKEN` remains necessary for branch-based Pages;
 release creation uses `GITHUB_TOKEN` with Contents write permission.
+
+## Professional experience
+
+`src/data/portfolio.json` contains the bilingual `experience` entries (employers,
+roles, dates, responsibilities, projects and recognition) and `education`.
+Use `endYear: null` for an ongoing role. The section appears before personal
+projects; technical details expand with native, keyboard-accessible disclosures.
+Employer initials are text identifiers, not official logos. Build-time prerender
+checks ensure employer, project and education content remains in the static HTML.
