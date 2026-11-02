@@ -1,0 +1,473 @@
+{
+  "defaultLanguage": "es",
+  "languages": [
+    {
+      "code": "es",
+      "label": "ES",
+      "switchLabel": "Cambiar a español"
+    },
+    {
+      "code": "en",
+      "label": "EN",
+      "switchLabel": "Switch to English"
+    }
+  ],
+  "metadata": {
+    "title": "Yemi Genderson | Ingeniero de Software Backend Java y Cloud",
+    "description": {
+      "es": "Portafolio de Yemi Genderson, ingeniero de software especializado en Java, microservicios y Azure.",
+      "en": "Portfolio of Yemi Genderson, software engineer focused on Java, microservices and Azure."
+    },
+    "siteUrl": "https://yegecali.github.io/yegecali/",
+    "siteName": "Yemi Genderson — Portfolio",
+    "openGraphLocale": "es_PE",
+    "themeColor": "#0b1120",
+    "searchConsoleVerification": ""
+  },
+  "brand": {
+    "logo": "yg",
+    "name": "yemi",
+    "suffix": ".dev",
+    "footerLogo": "yg."
+  },
+  "profile": {
+    "name": "Yemi Genderson",
+    "handle": "@yegecali",
+    "primarySocial": "github",
+    "contactSocial": "linkedin",
+    "specialty": "Java & Cloud",
+    "monogram": {
+      "primary": "Y",
+      "secondary": "G",
+      "punctuation": ".",
+      "code": "</>",
+      "caption": "BACKEND / CLOUD"
+    }
+  },
+  "navigation": [
+    {
+      "id": "projects",
+      "labelKey": "projects"
+    },
+    {
+      "id": "skills",
+      "labelKey": "skills"
+    },
+    {
+      "id": "about",
+      "labelKey": "about"
+    }
+  ],
+  "socials": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/yegecali",
+      "kicker": "CODE & OPEN SOURCE",
+      "descriptionKey": "github",
+      "actionKey": "repositories",
+      "decoration": "{ }"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/yemigenderson/",
+      "descriptionKey": "linkedin",
+      "actionKey": "visit"
+    }
+  ],
+  "sections": {
+    "connections": {
+      "marker": "01 — CONNECT"
+    },
+    "projects": {
+      "marker": "02 — BUILD"
+    },
+    "skills": {
+      "marker": "03 — TOOLKIT"
+    },
+    "about": {
+      "marker": "04 — HUMAN"
+    },
+    "contact": {
+      "eyebrow": "LET’S MAKE IT HAPPEN"
+    }
+  },
+  "projectFilters": [
+    {
+      "id": "all",
+      "labelKey": "all"
+    },
+    {
+      "id": "cloud",
+      "labelKey": "cloud"
+    },
+    {
+      "id": "backend",
+      "labelKey": "backend"
+    },
+    {
+      "id": "quality",
+      "labelKey": "quality"
+    }
+  ],
+  "projects": [
+    {
+      "name": "automation-identity-azure",
+      "url": "https://github.com/yegecali/automation-identity-azure",
+      "description": {
+        "es": "Automatización de tareas e integraciones de identidad en el ecosistema Azure.",
+        "en": "Automation of identity tasks and integrations in the Azure ecosystem."
+      },
+      "tags": [
+        "Azure",
+        "Automation",
+        "Identity"
+      ],
+      "id": "automation-identity-azure",
+      "category": "cloud",
+      "displayName": "Identity automation",
+      "icon": "cloud",
+      "tone": "teal"
+    },
+    {
+      "name": "proxy-resilience",
+      "url": "https://github.com/yegecali/proxy-resilience",
+      "description": {
+        "es": "Exploración de mecanismos de resiliencia y tolerancia a fallos.",
+        "en": "Exploration of resilience and fault-tolerance mechanisms."
+      },
+      "tags": [
+        "Resilience",
+        "Backend"
+      ],
+      "id": "proxy-resilience",
+      "category": "backend",
+      "displayName": "Proxy resilience",
+      "icon": "activity",
+      "tone": "purple"
+    },
+    {
+      "name": "template-karate-e2e",
+      "url": "https://github.com/yegecali/template-karate-e2e",
+      "description": {
+        "es": "Plantilla para pruebas automatizadas de extremo a extremo.",
+        "en": "Template for automated end-to-end testing."
+      },
+      "tags": [
+        "Karate",
+        "E2E",
+        "Testing"
+      ],
+      "id": "template-karate-e2e",
+      "category": "quality",
+      "displayName": "Karate E2E",
+      "icon": "shield",
+      "tone": "amber"
+    },
+    {
+      "name": "template-playwright-e2e",
+      "url": "https://github.com/yegecali/template-playwright-e2e",
+      "description": {
+        "es": "Base reutilizable para automatización de pruebas con Playwright.",
+        "en": "Reusable base for test automation with Playwright."
+      },
+      "tags": [
+        "Playwright",
+        "Testing"
+      ],
+      "id": "template-playwright-e2e",
+      "category": "quality",
+      "displayName": "Playwright E2E",
+      "icon": "terminal",
+      "tone": "blue"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Backend & Reactive",
+      "items": [
+        "Java",
+        "Spring Boot",
+        "Spring WebFlux",
+        "RxJava",
+        "Quarkus",
+        "Python"
+      ],
+      "id": "backend",
+      "icon": "code"
+    },
+    {
+      "title": "Architecture",
+      "items": [
+        "Microservices",
+        "DDD",
+        "Event-Driven",
+        "CQRS",
+        "Saga",
+        "Outbox"
+      ],
+      "id": "architecture",
+      "icon": "layers"
+    },
+    {
+      "title": "Cloud & DevOps",
+      "items": [
+        "Microsoft Azure",
+        "Azure Functions",
+        "GitHub Actions",
+        "Docker",
+        "Jenkins"
+      ],
+      "id": "cloud",
+      "icon": "cloud"
+    },
+    {
+      "title": "Data & Messaging",
+      "items": [
+        "Apache Kafka",
+        "SQL Server",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis"
+      ],
+      "id": "data",
+      "icon": "database"
+    },
+    {
+      "title": "Quality & Security",
+      "items": [
+        "JUnit 5",
+        "Mockito",
+        "Karate",
+        "SonarQube",
+        "OAuth 2.0"
+      ],
+      "id": "quality",
+      "icon": "shield"
+    },
+    {
+      "title": "Observability",
+      "items": [
+        "Dynatrace",
+        "Grafana",
+        "Prometheus",
+        "Kibana",
+        "Loki"
+      ],
+      "id": "observability",
+      "icon": "activity"
+    }
+  ],
+  "translations": {
+    "es": {
+      "tag": "Ingeniería de software · Perú",
+      "projects": "Proyectos",
+      "skills": "Tecnologías",
+      "about": "Sobre mí",
+      "hello": "UN POCO DE CÓDIGO. MUCHA CURIOSIDAD.",
+      "title": "Ideas claras.",
+      "title2": "Sistemas sólidos.",
+      "intro": "Backend, cloud y arquitectura. Un espacio para compartir lo que construyo y las ideas detrás del código.",
+      "connect": "Conectemos",
+      "profile": "Software Engineer",
+      "bio": "Construyo software con intención. Java, microservicios y una curiosidad que nunca se apaga.",
+      "location": "Perú",
+      "explore": "Explora mi mundo",
+      "exploreSub": "Código, proyectos y conversaciones. Todo empieza con una conexión.",
+      "github": "Donde las ideas se convierten en código.",
+      "linkedin": "Hablemos de ingeniería y nuevas ideas.",
+      "visit": "Ver perfil",
+      "repositories": "Explorar repositorios",
+      "focus": "MI ENFOQUE",
+      "focusTitle": "Diseñar para evolucionar.",
+      "focusBody": "Resiliencia, seguridad y observabilidad desde la primera línea.",
+      "work": "PROYECTOS SELECCIONADOS",
+      "workTitle": "Del concepto al código.",
+      "all": "Todos",
+      "cloud": "Cloud",
+      "backend": "Backend",
+      "quality": "Calidad",
+      "repo": "Ver repositorio",
+      "stack": "TECNOLOGÍAS & HERRAMIENTAS",
+      "stackTitle": "Las piezas de mi trabajo.",
+      "aboutLabel": "DETRÁS DEL CÓDIGO",
+      "aboutTitle": "Ingeniería con propósito.",
+      "footer": "Hecho con intención y React.",
+      "copy": "Copiar enlace del perfil",
+      "copied": "Enlace copiado",
+      "copyError": "No se pudo copiar el enlace",
+      "go": "Volver al inicio",
+      "connection": "¿Tienes una idea en mente?",
+      "talk": "Conversemos en LinkedIn",
+      "note": "Siempre aprendiendo. Siempre construyendo.",
+      "values": [
+        {
+          "title": "Diseño consciente",
+          "description": "Patrones y principios aplicados cuando aportan valor real al dominio."
+        },
+        {
+          "title": "Confiabilidad",
+          "description": "Sistemas observables, seguros y preparados para fallar con control."
+        },
+        {
+          "title": "Aprendizaje continuo",
+          "description": "Exploro nuevas tecnologías y cuestiono mis propias decisiones."
+        }
+      ],
+      "skipLink": "Saltar al contenido",
+      "navigationLabel": "Navegación principal",
+      "filterLabel": "Filtrar proyectos",
+      "portraitLabel": "Monograma de {name}",
+      "aboutText": "Soy ingeniero de software con experiencia en sistemas críticos del sector bancario. Trabajo con Java, Spring Boot, programación reactiva, arquitectura orientada a eventos y tecnologías cloud. Priorizo decisiones técnicas justificadas, código claro y mejora continua."
+    },
+    "en": {
+      "tag": "Software engineering · Peru",
+      "projects": "Projects",
+      "skills": "Skills",
+      "about": "About",
+      "hello": "A LITTLE CODE. A LOT OF CURIOSITY.",
+      "title": "Clear ideas.",
+      "title2": "Solid systems.",
+      "intro": "Backend, cloud and architecture. A space for the things I build and the thinking behind the code.",
+      "connect": "Let’s connect",
+      "profile": "Software Engineer",
+      "bio": "Building software with intention. Java, microservices and a curiosity that never switches off.",
+      "location": "Peru",
+      "explore": "Explore my world",
+      "exploreSub": "Code, projects and conversations. It all starts with a connection.",
+      "github": "Where ideas become working code.",
+      "linkedin": "Engineering, conversations and new ideas.",
+      "visit": "View profile",
+      "repositories": "Explore repositories",
+      "focus": "MY APPROACH",
+      "focusTitle": "Designed to evolve.",
+      "focusBody": "Resilience, security and observability from the very first line.",
+      "work": "SELECTED PROJECTS",
+      "workTitle": "From concept to code.",
+      "all": "All",
+      "cloud": "Cloud",
+      "backend": "Backend",
+      "quality": "Quality",
+      "repo": "View repository",
+      "stack": "TECHNOLOGIES & TOOLS",
+      "stackTitle": "The pieces of my work.",
+      "aboutLabel": "BEHIND THE CODE",
+      "aboutTitle": "Engineering with purpose.",
+      "footer": "Made with intention and React.",
+      "copy": "Copy profile link",
+      "copied": "Link copied",
+      "copyError": "Could not copy the link",
+      "go": "Back to top",
+      "connection": "Have an idea in mind?",
+      "talk": "Let’s talk on LinkedIn",
+      "note": "Always learning. Always building.",
+      "values": [
+        {
+          "title": "Intentional design",
+          "description": "Applying patterns and principles when they add real domain value."
+        },
+        {
+          "title": "Reliability",
+          "description": "Observable, secure systems designed for controlled failure."
+        },
+        {
+          "title": "Continuous learning",
+          "description": "Exploring technologies and challenging my own assumptions."
+        }
+      ],
+      "skipLink": "Skip to content",
+      "navigationLabel": "Main navigation",
+      "filterLabel": "Filter projects",
+      "portraitLabel": "Monogram of {name}",
+      "aboutText": "I'm a software engineer with experience in mission-critical banking systems. I work with Java, Spring Boot, reactive programming, event-driven architecture and cloud technologies. I value justified technical decisions, clear code and continuous improvement."
+    }
+  },
+  "effects": {
+    "aos": {
+      "duration": 650,
+      "offset": 32,
+      "once": true
+    },
+    "particles": {
+      "mobileBreakpoint": 760,
+      "mobileCount": 26,
+      "config": {
+        "particles": {
+          "number": {
+            "value": 48,
+            "density": {
+              "enable": true,
+              "value_area": 1000
+            }
+          },
+          "color": {
+            "value": [
+              "#efb67e",
+              "#a89ac9",
+              "#729eae"
+            ]
+          },
+          "shape": {
+            "type": "circle"
+          },
+          "opacity": {
+            "value": 0.32,
+            "random": true
+          },
+          "size": {
+            "value": 2,
+            "random": true
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 135,
+            "color": "#a89ac9",
+            "opacity": 0.12,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 0.45,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false
+          }
+        },
+        "interactivity": {
+          "events": {
+            "onhover": {
+              "enable": false
+            },
+            "onclick": {
+              "enable": false
+            },
+            "resize": false
+          }
+        },
+        "retina_detect": false
+      }
+    },
+    "spring": {
+      "enabled": true,
+      "config": {
+        "mass": 1,
+        "tension": 260,
+        "friction": 24
+      },
+      "tiltDegrees": 4,
+      "hoverLift": 5,
+      "pressScale": 0.98,
+      "transitionOffset": 14,
+      "trail": 70,
+      "floatDistance": 5,
+      "floatRotation": 10,
+      "floatDuration": 1800,
+      "floatCycles": 3
+    }
+  }
+}
