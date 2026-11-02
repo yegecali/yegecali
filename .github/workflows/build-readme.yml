@@ -1,4 +1,4 @@
-name: Build and publish profile README
+name: Build and publish profile README v2
 
 on:
   push:
@@ -6,15 +6,18 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: publish-profile-readme
   cancel-in-progress: false
 
 jobs:
-  publish:
+  validate-and-publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
     steps:
       - name: Checkout source branch
         uses: actions/checkout@v4
@@ -27,33 +30,53 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-          cache-dependency-path: .readme/requirements.txt
+          cache-dependency-path: |
+            .readme/requirements.txt
+            .readme/requirements-dev.txt
 
       - name: Install dependencies
-        run: python -m pip install -r .readme/requirements.txt
+        run: python -m pip install -r .readme/requirements-dev.txt
+
+      - name: Validate profile data
+        run: python .readme/build_readme.py --check
+
+      - name: Run automated tests
+        run: python -m pytest -q .readme/tests
 
       - name: Generate README
         run: python .readme/build_readme.py
 
-      - name: Publish generated README to main
+      - name: Publish README to main safely
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
         shell: bash
         run: |
           set -euo pipefail
           cp README.md "${RUNNER_TEMP}/generated-README.md"
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" fetch origin main
-          # A separate worktree prevents the generated README from blocking checkout.
-          git worktree add --detach "${RUNNER_TEMP}/publish-main" FETCH_HEAD
-          cd "${RUNNER_TEMP}/publish-main"
-          cp "${RUNNER_TEMP}/generated-README.md" README.md
-          git add README.md
-          if git diff --cached --quiet; then
-            echo 'README unchanged; nothing to publish.'
-            exit 0
-          fi
-          git commit -m 'docs: regenerate profile README [skip ci]'
-          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" push origin HEAD:main
+          AUTH_HEADER="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          # Rebase the single-file update on the latest main, never force push.
+          for attempt in 1 2 3; do
+            git -c http.extraheader="$AUTH_HEADER" fetch origin main
+            if [ -d "${RUNNER_TEMP}/publish-main" ]; then
+              git worktree remove --force "${RUNNER_TEMP}/publish-main"
+            fi
+            git worktree add --detach "${RUNNER_TEMP}/publish-main" FETCH_HEAD
+            cd "${RUNNER_TEMP}/publish-main"
+            cp "${RUNNER_TEMP}/generated-README.md" README.md
+            git add -- README.md
+            if git diff --cached --quiet; then
+              echo "README unchanged; no publication necessary."
+              exit 0
+            fi
+            git commit -m 'docs: regenerate profile README [skip ci]'
+            if git -c http.extraheader="$AUTH_HEADER" push origin HEAD:main; then
+              echo "README published to main."
+              exit 0
+            fi
+            cd "$GITHUB_WORKSPACE"
+            echo "Push rejected (attempt $attempt); retrying against latest main..."
+          done
+          echo "::error::Unable to publish README after three non-force attempts."
+          exit 1
