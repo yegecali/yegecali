@@ -3,9 +3,6 @@ name: Build React portfolio and publish to gp-portfolio
 on:
   push:
     branches: [gp-portfolio-build]
-    paths:
-      - 'portfolio/**'
-      - '.github/workflows/portfolio-pages.yml'
   pull_request:
     branches: [gp-portfolio-build]
   workflow_dispatch:

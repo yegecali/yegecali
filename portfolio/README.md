@@ -122,6 +122,12 @@ Los breakpoints disponibles son `small`, `mobile`, `tablet` y `wide`. También p
 
 Push to `gp-portfolio-build`. GitHub Actions builds `portfolio/dist` and commits only the generated static site to `gp-portfolio`. Set **Settings → Pages → Build and deployment → Deploy from a branch → gp-portfolio / (root)** once. The site is not published until that setting is enabled. No GitHub Pages workflow is required in the publishing branch.
 
+El workflow se ejecuta con cualquier push a `gp-portfolio-build`, sin filtrar archivos modificados. Un commit local se despliega después de hacer push. Los pull requests hacia esa rama compilan y validan sin publicar.
+
+Para desplegar manualmente, abre **Actions → Build React portfolio and publish to gp-portfolio → Run workflow**, selecciona `gp-portfolio-build` y ejecuta. El despliegue manual siempre usa la versión más reciente de esa rama; `create_release` permite generar además una release opcional. También puedes usar `gh workflow run portfolio-pages.yml --ref gp-portfolio-build`.
+
+GitHub requiere que el archivo del workflow con `workflow_dispatch` exista también en la rama predeterminada para habilitar la ejecución manual. Si no aparece el botón, incorpora ese archivo en la rama predeterminada. [Documentación de GitHub](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow?tool=webui).
+
 ### Ruta del sitio en GitHub Pages
 
 El repositorio actual, `yegecali/yegecali`, es un sitio de proyecto y su URL predeterminada es `https://yegecali.github.io/yegecali/`. Elegir `/(root)` en Settings → Pages selecciona la carpeta de la rama que se publica; no elimina el nombre del repositorio de la URL.
