@@ -37,41 +37,8 @@
 {% for group in data.technology_groups %}
 ### {{ group.title_es }}
 
-{% for technology in group.items %}{{ technology | badge }} {% endfor %}
+{{ group.items | map('badge') | join(' ') }}
 
 {% endfor %}
 
-## 📌 Proyectos destacados
-
-{% for project in data.featured_projects %}
-- **[{{ project.name }}]({{ project.url }})** — {{ project.description }}
-{% endfor %}
-
----
-
-## 🇬🇧 About me
-
-**{{ en.headline }}** · {{ data.location }}
-
-{{ en.intro }}
-
-### What I focus on
-
-{% for item in en.focus %}
-- {{ item }}
-{% endfor %}
-
-### Engineering approach
-
-{% for item in en.approach %}
-- {{ item }}
-{% endfor %}
-
-### Technology stack
-
-{% for group in data.technology_groups %}
-**{{ group.title_en }}:** {{ group.items | map(attribute='name') | join(' · ') }}
-
-{% endfor %}
-
-<p align="center">🙌 Gracias por visitar mi perfil · Thanks for visiting my profile!</p>
+<p align="center">🙌 Gracias por visitar mi perfil</p>

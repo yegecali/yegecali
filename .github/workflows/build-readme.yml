@@ -3,13 +3,20 @@ name: Build and publish profile README v2
 on:
   push:
     branches: [build-readme]
+  pull_request:
+    branches: [build-readme]
   workflow_dispatch:
+    inputs:
+      create_release:
+        description: 'Create a release with the validated output'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
 
 concurrency:
-  group: publish-profile-readme
+  group: publish-profile-readme-${{ github.event.pull_request.number || 'publish' }}
   cancel-in-progress: false
 
 jobs:
@@ -22,7 +29,7 @@ jobs:
       - name: Checkout source branch
         uses: actions/checkout@v4
         with:
-          ref: build-readme
+          ref: ${{ github.event_name == 'workflow_dispatch' && 'build-readme' || github.sha }}
           persist-credentials: false
 
       - name: Set up Python
@@ -46,7 +53,20 @@ jobs:
       - name: Generate README
         run: python .readme/build_readme.py
 
+      - name: Record source commit
+        id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Preserve validated output
+        uses: actions/upload-artifact@v4
+        with:
+          name: readme-${{ steps.source.outputs.sha }}
+          path: README.md
+          if-no-files-found: error
+          retention-days: 14
+
       - name: Publish README to main safely
+        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
@@ -80,3 +100,19 @@ jobs:
           done
           echo "::error::Unable to publish README after three non-force attempts."
           exit 1
+
+      - name: Create release from validated output
+        if: github.event_name == 'workflow_dispatch' && inputs.create_release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+          RELEASE_TAG: readme-${{ github.run_id }}.${{ github.run_attempt }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp README.md "$RUNNER_TEMP/README.md"
+          (cd "$RUNNER_TEMP" && sha256sum README.md > SHA256SUMS)
+          gh release create "$RELEASE_TAG" "$RUNNER_TEMP/README.md" "$RUNNER_TEMP/SHA256SUMS" \
+            --repo "$GITHUB_REPOSITORY" --target "$SOURCE_SHA" \
+            --title "readme $RELEASE_TAG" --latest=false \
+            --notes "Validated readme output from commit $SOURCE_SHA. Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

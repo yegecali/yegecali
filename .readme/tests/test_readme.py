@@ -20,9 +20,11 @@ def test_profile_json_validates():
 def test_generated_readme_contains_key_sections(tmp_path):
     rendered = build(output=tmp_path / "README.md")
     assert "assets/code.gif" in rendered
-    assert "## 🇬🇧 About me" in rendered
+    assert "About me" not in rendered
     assert "Java" in rendered and "Kafka" in rendered
-    assert "## 📌 Proyectos destacados" in rendered
+    assert "Proyectos destacados" not in rendered
+    assert "What I focus on" not in rendered
+    assert "## 👨‍💻 Sobre mí" in rendered
     assert (tmp_path / "README.md").read_text(encoding="utf-8") == rendered
 
 

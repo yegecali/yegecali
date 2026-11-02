@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate JSON profile data and render a bilingual GitHub README."""
+"""Validate JSON profile data and render a Spanish GitHub README."""
 from __future__ import annotations
 
 import argparse
@@ -119,7 +119,7 @@ def build(output: Path = ROOT / "README.md", data_path: Path = SOURCE / "data.js
         data=data, es=data.profile["es"], en=data.profile["en"],
         typing_svg=typing_url(data.typing_lines),
     )
-    required = ["assets/code.gif", "## 🧰", "## 🇬🇧", "github.com/yegecali"]
+    required = ["assets/code.gif", "## 🧰", "github.com/yegecali"]
     if not all(marker in rendered for marker in required):
         raise ValueError("Generated README is missing required profile sections")
     if not rendered.strip():
