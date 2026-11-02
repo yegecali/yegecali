@@ -1,0 +1,88 @@
+name: Build React portfolio and publish to gp-portfolio
+
+on:
+  push:
+    branches: [gp-portfolio-build]
+    paths:
+      - 'portfolio/**'
+      - '.github/workflows/portfolio-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gp-portfolio-publish
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          ref: gp-portfolio-build
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: portfolio/package-lock.json
+
+      - name: Install dependencies
+        working-directory: portfolio
+        run: npm ci
+
+      - name: Build static site
+        working-directory: portfolio
+        run: npm run build
+
+      - name: Check output
+        run: |
+          test -s portfolio/dist/index.html
+          test -d portfolio/dist/assets
+
+      - name: Publish static assets to gp-portfolio
+        env:
+          PAGES_DEPLOY_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$PAGES_DEPLOY_TOKEN" ]; then
+            echo "::error::Configure PAGES_DEPLOY_TOKEN (fine-grained PAT with Contents: Read and write) in repository Actions secrets. A GITHUB_TOKEN push does not trigger branch-based GitHub Pages builds."
+            exit 1
+          fi
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          AUTH_HEADER="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$PAGES_DEPLOY_TOKEN" | base64 -w0)"
+          cp -a portfolio/dist "${RUNNER_TEMP}/site"
+          touch "${RUNNER_TEMP}/site/.nojekyll"
+          for attempt in 1 2 3; do
+            git -c http.extraheader="$AUTH_HEADER" fetch origin gp-portfolio
+            if [ -d "${RUNNER_TEMP}/gp-portfolio-worktree" ]; then
+              git worktree remove --force "${RUNNER_TEMP}/gp-portfolio-worktree"
+            fi
+            git worktree add --detach "${RUNNER_TEMP}/gp-portfolio-worktree" FETCH_HEAD
+            cd "${RUNNER_TEMP}/gp-portfolio-worktree"
+            git rm -rq --ignore-unmatch .
+            find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+            cp -a "${RUNNER_TEMP}/site/." .
+            git add -A
+            if git diff --cached --quiet; then
+              echo "No portfolio changes to publish."
+              exit 0
+            fi
+            git commit -m 'deploy: update React portfolio'
+            if git -c http.extraheader="$AUTH_HEADER" push origin HEAD:gp-portfolio; then
+              echo "Published to gp-portfolio."
+              exit 0
+            fi
+            cd "$GITHUB_WORKSPACE"
+            echo "Push rejected; retrying against latest branch ($attempt/3)"
+          done
+          echo "::error::Could not publish after three attempts"
+          exit 1
