@@ -56,11 +56,20 @@ jobs:
           fi
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          AUTH_HEADER="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$PAGES_DEPLOY_TOKEN" | base64 -w0)"
+          export GIT_TERMINAL_PROMPT=0
+          # Validate the PAT before attempting Git operations.
+          if ! GH_TOKEN="$PAGES_DEPLOY_TOKEN" gh api "repos/$GITHUB_REPOSITORY" --silent >/dev/null; then
+            echo "::error::PAGES_DEPLOY_TOKEN cannot access this repository. Verify expiration, selected repository, and Contents: Read and write permissions."
+            exit 1
+          fi
+          # Git's credential helper supplies the token without embedding it in the remote URL.
+          git config --global credential.helper '!f() { if [ "$1" = get ]; then printf "username=x-access-token\\npassword=%s\\n" "$PAGES_DEPLOY_TOKEN"; fi; }; f'
+          git config --global credential.https://github.com.useHttpPath true
+          git remote set-url origin "https://github.com/$GITHUB_REPOSITORY.git"
           cp -a portfolio/dist "${RUNNER_TEMP}/site"
           touch "${RUNNER_TEMP}/site/.nojekyll"
           for attempt in 1 2 3; do
-            git -c http.extraheader="$AUTH_HEADER" fetch origin gp-portfolio
+            git fetch origin gp-portfolio
             if [ -d "${RUNNER_TEMP}/gp-portfolio-worktree" ]; then
               git worktree remove --force "${RUNNER_TEMP}/gp-portfolio-worktree"
             fi
@@ -75,7 +84,7 @@ jobs:
               exit 0
             fi
             git commit -m 'deploy: update React portfolio'
-            if git -c http.extraheader="$AUTH_HEADER" push origin HEAD:gp-portfolio; then
+            if git push origin HEAD:gp-portfolio; then
               echo "Published to gp-portfolio."
               exit 0
             fi
