@@ -111,3 +111,23 @@
     display: none;
   }
 }
+
+@include down(mobile) {
+  .header {
+    height: auto;
+    min-height: 83px;
+    padding: 20px 0 0;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .header nav {
+    display: flex;
+    order: 3;
+    flex-basis: 100%;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 8px;
+    a { display: inline-flex; align-items: center; min-height: 44px; flex-shrink: 0; }
+  }
+}
