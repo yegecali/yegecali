@@ -6,34 +6,45 @@ on:
     paths:
       - 'portfolio/**'
       - '.github/workflows/portfolio-pages.yml'
+  pull_request:
+    branches: [gp-portfolio-build]
   workflow_dispatch:
+    inputs:
+      create_release:
+        description: 'Create a release with the validated output'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
 
 concurrency:
-  group: gp-portfolio-publish
+  group: gp-portfolio-${{ github.event.pull_request.number || 'publish' }}
   cancel-in-progress: false
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
         with:
-          ref: gp-portfolio-build
+          ref: ${{ github.event_name == 'workflow_dispatch' && 'gp-portfolio-build' || github.sha }}
           persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
+          cache-dependency-path: portfolio/package-lock.json
 
       - name: Install dependencies
         working-directory: portfolio
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
 
       - name: Build static site
         working-directory: portfolio
@@ -44,7 +55,20 @@ jobs:
           test -s portfolio/dist/index.html
           test -d portfolio/dist/assets
 
+      - name: Record source commit
+        id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Preserve validated output
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-${{ steps.source.outputs.sha }}
+          path: portfolio/dist/
+          if-no-files-found: error
+          retention-days: 14
+
       - name: Publish static assets to gp-portfolio
+        if: github.event_name != 'pull_request'
         env:
           PAGES_DEPLOY_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
         shell: bash
@@ -93,3 +117,19 @@ jobs:
           done
           echo "::error::Could not publish after three attempts"
           exit 1
+
+      - name: Create release from validated output
+        if: github.event_name == 'workflow_dispatch' && inputs.create_release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+          RELEASE_TAG: portfolio-${{ github.run_id }}.${{ github.run_attempt }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tar -czf "$RUNNER_TEMP/portfolio.tar.gz" -C portfolio/dist .
+          sha256sum "$RUNNER_TEMP/portfolio.tar.gz" | sed "s|$RUNNER_TEMP/||" > "$RUNNER_TEMP/SHA256SUMS"
+          gh release create "$RELEASE_TAG" "$RUNNER_TEMP/portfolio.tar.gz" "$RUNNER_TEMP/SHA256SUMS" \
+            --repo "$GITHUB_REPOSITORY" --target "$SOURCE_SHA" \
+            --title "portfolio $RELEASE_TAG" --latest=false \
+            --notes "Validated portfolio output from commit $SOURCE_SHA. Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
