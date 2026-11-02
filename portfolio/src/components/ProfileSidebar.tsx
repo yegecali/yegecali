@@ -29,6 +29,15 @@ export default function ProfileSidebar() {
           <span><Icon name="map-pin" size={15} />{t.location}</span>
           <span><Icon name="code" size={15} />{profile.specialty}</span>
         </div>
+        <a
+          className="download-cv"
+          href={`${import.meta.env.BASE_URL}${profile.cv.path}`}
+          download={profile.cv.filename}
+        >
+          <Icon name="download" size={18} />
+          <span>{t.downloadCv}</span>
+          <span className="download-cv-format">PDF</span>
+        </a>
         <div className="profile-divider" />
         <div className="profile-bottom">
           <div className="profile-socials">

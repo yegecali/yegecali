@@ -199,3 +199,29 @@
     margin-top: 18px;
   }
 }
+
+.download-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 24px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: $accent;
+  color: #17121d;
+  font-size: 13px;
+  font-weight: 700;
+
+  &:hover { background: #ffc994; }
+  > svg { flex-shrink: 0; }
+}
+
+.download-cv-format {
+  padding: 3px 5px;
+  border: 1px solid #17121d38;
+  border-radius: 4px;
+  font-size: 9px;
+}
