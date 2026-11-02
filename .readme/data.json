@@ -1,36 +1,6 @@
 {
   "name": "Yemi Genderson",
-  "headline": "Ingeniero de Software · Backend Java · Microservicios · Cloud",
   "location": "Perú 🇵🇪",
-  "intro": "Soy ingeniero de software con experiencia en el sector bancario y el desarrollo de sistemas críticos. Me especializo en backend con Java, Spring Boot, programación reactiva y arquitectura de microservicios. Diseño APIs e integraciones con foco en resiliencia, seguridad, observabilidad, calidad y evolución sostenible. Me interesa aplicar patrones de diseño y automatización con criterio técnico, sin sobrediseñar las soluciones.",
-  "focus": [
-    "🔧 APIs y microservicios con Java, Spring Boot, Quarkus, Spring WebFlux y RxJava.",
-    "🏦 Ingeniería de software en banca: integraciones, seguridad, disponibilidad y calidad.",
-    "📨 Arquitecturas orientadas a eventos con Kafka, patrones Saga, Outbox, Inbox y CQRS.",
-    "☁️ Automatización e infraestructura en Azure, CI/CD y prácticas DevOps.",
-    "📊 Observabilidad, pruebas y mejora continua con Grafana, Dynatrace y herramientas de calidad."
-  ],
-  "technologies": {
-    "Backend": [
-      "Java",
-      "Python",
-      "Spring Boot",
-      "Quarkus",
-      "WebFlux",
-      "RxJava"
-    ],
-    "CloudDevOps": [
-      "Azure",
-      "Docker",
-      "GitHub Actions"
-    ],
-    "Practices": [
-      "Clean Code",
-      "SOLID",
-      "Testing",
-      "Observabilidad"
-    ]
-  },
   "links": [
     {
       "label": "GitHub",
@@ -57,5 +27,223 @@
       "description": "Proyecto de experimentación sobre resiliencia.",
       "url": "https://github.com/yegecali/proxy-resilience"
     }
-  ]
+  ],
+  "profile": {
+    "es": {
+      "headline": "Ingeniero de Software · Backend Java · Microservicios · Cloud",
+      "intro": "Soy ingeniero de software con experiencia en el sector bancario y el desarrollo de sistemas críticos. Me especializo en backend con Java, Spring Boot, programación reactiva y arquitectura de microservicios. Diseño APIs e integraciones con foco en resiliencia, seguridad, observabilidad, calidad y evolución sostenible. Me interesa aplicar patrones de diseño y automatización con criterio técnico, sin sobrediseñar las soluciones.",
+      "focus": [
+        "🔧 APIs y microservicios con Java, Spring Boot, Quarkus, Spring WebFlux y RxJava.",
+        "🏦 Ingeniería de software en banca: integraciones, seguridad, disponibilidad y calidad.",
+        "📨 Arquitecturas orientadas a eventos con Kafka, patrones Saga, Outbox, Inbox y CQRS.",
+        "☁️ Automatización e infraestructura en Azure, CI/CD y prácticas DevOps.",
+        "📊 Observabilidad, pruebas y mejora continua con Grafana, Dynatrace y herramientas de calidad."
+      ],
+      "approach": [
+        "Arquitectura: DDD, SOLID y patrones aplicados según el dominio.",
+        "Confiabilidad: resiliencia, idempotencia, pruebas y observabilidad.",
+        "Entrega: automatización, CI/CD y revisión continua de código."
+      ]
+    },
+    "en": {
+      "headline": "Software Engineer · Java Backend · Microservices · Cloud",
+      "intro": "Software engineer with experience in banking and critical systems. I specialize in Java, Spring Boot, reactive programming, and microservice architecture. I build reliable APIs and integrations with a focus on security, resilience, observability, and maintainable design.",
+      "focus": [
+        "🔧 APIs and microservices with Java, Spring Boot, Quarkus, WebFlux and RxJava.",
+        "🏦 Banking systems: secure integrations, availability and software quality.",
+        "📨 Event-driven architecture with Kafka, Saga, Outbox, Inbox and CQRS.",
+        "☁️ Azure infrastructure, automation and CI/CD.",
+        "📊 Testing, observability and continuous improvement."
+      ],
+      "approach": [
+        "Architecture: DDD, SOLID and domain-driven design decisions.",
+        "Reliability: resilience, idempotency, automated testing and observability.",
+        "Delivery: CI/CD, code reviews and incremental improvements."
+      ]
+    }
+  },
+  "technology_groups": [
+    {
+      "title_es": "💻 Backend y programación reactiva",
+      "title_en": "💻 Backend and reactive programming",
+      "items": [
+        {
+          "name": "Java",
+          "color": "ED8B00",
+          "logo": "openjdk"
+        },
+        {
+          "name": "Spring Boot",
+          "color": "6DB33F",
+          "logo": "springboot"
+        },
+        {
+          "name": "Quarkus",
+          "color": "4695EB",
+          "logo": "quarkus"
+        },
+        {
+          "name": "WebFlux",
+          "color": "6DB33F",
+          "logo": "spring"
+        },
+        {
+          "name": "RxJava",
+          "color": "B7178C",
+          "logo": "reactivex"
+        },
+        {
+          "name": "Python",
+          "color": "3776AB",
+          "logo": "python"
+        },
+        {
+          "name": "Kotlin",
+          "color": "7F52FF",
+          "logo": "kotlin"
+        },
+        {
+          "name": "Scala",
+          "color": "DC322F",
+          "logo": "scala"
+        }
+      ]
+    },
+    {
+      "title_es": "📨 Eventos y datos",
+      "title_en": "📨 Events and data",
+      "items": [
+        {
+          "name": "Apache Kafka",
+          "color": "231F20",
+          "logo": "apachekafka"
+        },
+        {
+          "name": "SQL Server",
+          "color": "CC2927",
+          "logo": ""
+        },
+        {
+          "name": "PostgreSQL",
+          "color": "4169E1",
+          "logo": "postgresql"
+        },
+        {
+          "name": "MongoDB",
+          "color": "47A248",
+          "logo": "mongodb"
+        },
+        {
+          "name": "Redis",
+          "color": "DC382D",
+          "logo": "redis"
+        },
+        {
+          "name": "Azure Cosmos DB",
+          "color": "0078D4",
+          "logo": ""
+        }
+      ]
+    },
+    {
+      "title_es": "☁️ Cloud y DevOps",
+      "title_en": "☁️ Cloud and DevOps",
+      "items": [
+        {
+          "name": "Microsoft Azure",
+          "color": "0078D4",
+          "logo": ""
+        },
+        {
+          "name": "Azure Functions",
+          "color": "0062AD",
+          "logo": "azurefunctions"
+        },
+        {
+          "name": "GitHub Actions",
+          "color": "2088FF",
+          "logo": "githubactions"
+        },
+        {
+          "name": "Azure DevOps",
+          "color": "0078D7",
+          "logo": ""
+        },
+        {
+          "name": "Docker",
+          "color": "2496ED",
+          "logo": "docker"
+        },
+        {
+          "name": "Jenkins",
+          "color": "D24939",
+          "logo": "jenkins"
+        },
+        {
+          "name": "Proxmox",
+          "color": "E57000",
+          "logo": "proxmox"
+        }
+      ]
+    },
+    {
+      "title_es": "📊 Observabilidad y calidad",
+      "title_en": "📊 Observability and quality",
+      "items": [
+        {
+          "name": "Dynatrace",
+          "color": "1496FF",
+          "logo": "dynatrace"
+        },
+        {
+          "name": "Grafana",
+          "color": "F46800",
+          "logo": "grafana"
+        },
+        {
+          "name": "Prometheus",
+          "color": "E6522C",
+          "logo": "prometheus"
+        },
+        {
+          "name": "Kibana",
+          "color": "005571",
+          "logo": "kibana"
+        },
+        {
+          "name": "SonarQube",
+          "color": "4E9BCD",
+          "logo": "sonarqube"
+        },
+        {
+          "name": "JUnit 5",
+          "color": "25A162",
+          "logo": "junit5"
+        },
+        {
+          "name": "Mockito",
+          "color": "445566",
+          "logo": ""
+        },
+        {
+          "name": "Karate",
+          "color": "34495E",
+          "logo": ""
+        },
+        {
+          "name": "JMeter",
+          "color": "D22128",
+          "logo": "apachejmeter"
+        }
+      ]
+    }
+  ],
+  "typing_lines": [
+    "Java · Spring Boot · Quarkus",
+    "Microservices · WebFlux · RxJava",
+    "Event-Driven Architecture · Kafka",
+    "Azure · DevOps · Observability"
+  ],
+  "animation_url": "https://raw.githubusercontent.com/yegecali/yegecali/main/assets/code.gif",
+  "locale": "es"
 }
