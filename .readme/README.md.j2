@@ -1,0 +1,26 @@
+<!-- Archivo generado automáticamente. Edita .readme/data.json y .readme/README.md.j2 en build-readme. -->
+# 👋 Hola, soy {{ name }}
+
+**{{ headline }}** · {{ location }}
+
+{{ intro }}
+
+## 🚀 En qué trabajo
+{% for item in focus %}
+- {{ item }}
+{% endfor %}
+
+## 🧰 Stack y prácticas
+{% for category, items in technologies.items() %}
+**{{ category }}:** {{ items | join(" · ") }}
+
+{% endfor %}
+## 📌 Proyectos destacados
+{% for project in featured_projects %}
+- **[{{ project.name }}]({{ project.url }})** — {{ project.description }}
+{% endfor %}
+
+## 🔗 Enlaces
+{% for link in links %}
+- [{{ link.label }}]({{ link.url }})
+{% endfor %}
