@@ -8,7 +8,7 @@ export type TextKey = {
 }[keyof Translation]
 
 export const iconNames = [
-  'activity', 'cloud', 'code', 'database', 'github', 'layers', 'linkedin', 'shield', 'terminal',
+  'download', 'activity', 'cloud', 'code', 'database', 'github', 'layers', 'linkedin', 'shield', 'terminal',
   'arrow-right', 'arrow-up-right', 'sparkles', 'map-pin', 'copy', 'check', 'globe',
 ] as const
 export type IconName = typeof iconNames[number]

@@ -170,3 +170,7 @@ Use `endYear: null` for an ongoing role. The section appears before personal
 projects; technical details expand with native, keyboard-accessible disclosures.
 Employer initials are text identifiers, not official logos. Build-time prerender
 checks ensure employer, project and education content remains in the static HTML.
+
+The profile's **Download CV** link serves the PDF from `public/cv/`, using Vite's
+base URL for GitHub Pages. Replace that file to update the CV; its relative path
+and download filename live in `profile.cv` in `src/data/portfolio.json`.

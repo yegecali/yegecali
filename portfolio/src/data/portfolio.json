@@ -42,6 +42,10 @@
       "punctuation": ".",
       "code": "</>",
       "caption": "BACKEND / CLOUD"
+    },
+    "cv": {
+      "path": "cv/Yemi-Genderson-Backend-Java.pdf",
+      "filename": "Yemi-Genderson-Backend-Java.pdf"
     }
   },
   "navigation": [
@@ -363,7 +367,8 @@
       "experienceProject": "Proyecto destacado",
       "experienceRecognition": "Reconocimientos",
       "educationLabel": "FORMACIÓN",
-      "educationDegree": "Ingeniería de Sistemas"
+      "educationDegree": "Ingeniería de Sistemas",
+      "downloadCv": "Descargar CV"
     },
     "en": {
       "tag": "Software engineering · Peru",
@@ -434,7 +439,8 @@
       "experienceProject": "Featured project",
       "experienceRecognition": "Recognition",
       "educationLabel": "EDUCATION",
-      "educationDegree": "Systems Engineering"
+      "educationDegree": "Systems Engineering",
+      "downloadCv": "Download CV"
     }
   },
   "effects": {
