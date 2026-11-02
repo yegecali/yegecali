@@ -1,13 +1,14 @@
 {
   "name": "Yemi Genderson",
-  "headline": "Ingeniero de Software | Backend & Cloud",
+  "headline": "Ingeniero de Software · Backend Java · Microservicios · Cloud",
   "location": "Perú 🇵🇪",
-  "intro": "Desarrollo soluciones backend, APIs y arquitecturas de microservicios con énfasis en mantenibilidad, resiliencia y automatización.",
+  "intro": "Soy ingeniero de software con experiencia en el sector bancario y el desarrollo de sistemas críticos. Me especializo en backend con Java, Spring Boot, programación reactiva y arquitectura de microservicios. Diseño APIs e integraciones con foco en resiliencia, seguridad, observabilidad, calidad y evolución sostenible. Me interesa aplicar patrones de diseño y automatización con criterio técnico, sin sobrediseñar las soluciones.",
   "focus": [
-    "Java, Spring Boot y Quarkus",
-    "Microservicios y programación reactiva (WebFlux, RxJava)",
-    "Arquitectura orientada a eventos y patrones de integración",
-    "Azure, CI/CD y observabilidad"
+    "🔧 APIs y microservicios con Java, Spring Boot, Quarkus, Spring WebFlux y RxJava.",
+    "🏦 Ingeniería de software en banca: integraciones, seguridad, disponibilidad y calidad.",
+    "📨 Arquitecturas orientadas a eventos con Kafka, patrones Saga, Outbox, Inbox y CQRS.",
+    "☁️ Automatización e infraestructura en Azure, CI/CD y prácticas DevOps.",
+    "📊 Observabilidad, pruebas y mejora continua con Grafana, Dynatrace y herramientas de calidad."
   ],
   "technologies": {
     "Backend": [
@@ -34,6 +35,10 @@
     {
       "label": "GitHub",
       "url": "https://github.com/yegecali"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/yemigenderson/"
     }
   ],
   "featured_projects": [
