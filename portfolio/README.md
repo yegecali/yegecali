@@ -59,6 +59,16 @@ Cada proyecto contiene su propio `id`, `category`, `displayName`, `icon`, `tone`
 
 Iconos disponibles en `components/common/Icon.tsx`: `activity`, `cloud`, `code`, `database`, `github`, `layers`, `linkedin`, `shield` y `terminal`. Colores de proyectos: `teal`, `purple`, `amber` y `blue`.
 
+Los iconos se gestionan con `react-icons`: los de interfaz usan la colección `react-icons/lu` y las marcas GitHub/LinkedIn usan `react-icons/fa6`. Todos pasan por el componente común `Icon`, que acepta `size`, `color`, `className`, `title` y props SVG. También están disponibles las claves de interfaz `arrow-right`, `arrow-up-right`, `sparkles`, `map-pin`, `copy`, `check` y `globe`.
+
+```tsx
+import Icon from './common/Icon'
+
+<Icon name="github" size={24} />
+```
+
+Para cambiar un icono existente, cambia su asignación en `Icon.tsx`; para agregar una clave, inclúyela también en `iconNames` de `types/portfolio.ts`. TypeScript verifica que cada clave tenga un componente asignado. Los iconos decorativos se ocultan de los lectores de pantalla; puedes darles un nombre accesible con `title` o `aria-label` cuando lo necesiten.
+
 La base de Vite continúa siendo `/yegecali/` para GitHub Pages: `https://yegecali.github.io/yegecali/`.
 
 ## TypeScript

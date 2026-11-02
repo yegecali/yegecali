@@ -7,7 +7,10 @@ export type TextKey = {
   [Key in keyof Translation]: Translation[Key] extends string ? Key : never
 }[keyof Translation]
 
-export const iconNames = ['activity', 'cloud', 'code', 'database', 'github', 'layers', 'linkedin', 'shield', 'terminal'] as const
+export const iconNames = [
+  'activity', 'cloud', 'code', 'database', 'github', 'layers', 'linkedin', 'shield', 'terminal',
+  'arrow-right', 'arrow-up-right', 'sparkles', 'map-pin', 'copy', 'check', 'globe',
+] as const
 export type IconName = typeof iconNames[number]
 export const projectTones = ['teal', 'purple', 'amber', 'blue'] as const
 export type ProjectTone = typeof projectTones[number]

@@ -1,4 +1,4 @@
-import { ArrowUpRight, Globe } from 'lucide-react'
+import Icon from './common/Icon'
 import { usePortfolio } from '../context/PortfolioContext'
 import SpringLink from './motion/SpringLink'
 
@@ -15,9 +15,9 @@ export default function Header() {
       </nav>
       <div className="header-tools">
         <button className="language" onClick={toggleLanguage} aria-label={nextLanguage.switchLabel}>
-          <Globe size={14} />{nextLanguage.label}
+          <Icon name="globe" size={14} />{nextLanguage.label}
         </button>
-        <SpringLink href={contactSocial.url} className="connect">{t.connect}<ArrowUpRight size={16} /></SpringLink>
+        <SpringLink href={contactSocial.url} className="connect">{t.connect}<Icon name="arrow-up-right" size={16} /></SpringLink>
       </div>
     </header>
   )

@@ -1,4 +1,3 @@
-import { ArrowUpRight } from 'lucide-react'
 import { animated, useTransition } from '@react-spring/web'
 import { usePortfolio } from '../context/PortfolioContext'
 import { useMotion } from '../context/MotionContext'
@@ -25,13 +24,13 @@ function ProjectCard({ project, index, categoryLabel, language, t, leaving }: Pr
         <span className="project-number">{String(index + 1).padStart(2, '0')} / {categoryLabel}</span>
         <div className="project-art"><span /><Icon name={project.icon} size={43} strokeWidth={1.2} /><span /></div>
         <span className="visual-caption">{project.displayName}</span>
-        <ArrowUpRight size={18} />
+        <Icon name="arrow-up-right" size={18} />
       </div>
       <div className="project-copy">
         <h3>{project.name}</h3>
         <p>{project.description[language]}</p>
         <Tags items={project.tags} />
-        <span className="repo-link">{t.repo}<ArrowUpRight size={13} /></span>
+        <span className="repo-link">{t.repo}<Icon name="arrow-up-right" size={13} /></span>
       </div>
     </SpringLink>
   )

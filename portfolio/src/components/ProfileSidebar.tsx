@@ -1,4 +1,3 @@
-import { ArrowUpRight, Check, Code2, Copy, MapPin } from 'lucide-react'
 import { usePortfolio } from '../context/PortfolioContext'
 import useClipboard from '../hooks/useClipboard'
 import ExternalLink from './common/ExternalLink'
@@ -23,12 +22,12 @@ export default function ProfileSidebar() {
       <div className="profile-card" data-aos="portfolio-up">
         <span className="profile-status"><i />{t.tag}</span>
         <h1>{profile.name}<span>{monogram.punctuation}</span></h1>
-        <ExternalLink href={primarySocial.url} className="handle">{profile.handle}<ArrowUpRight size={12} /></ExternalLink>
+        <ExternalLink href={primarySocial.url} className="handle">{profile.handle}<Icon name="arrow-up-right" size={12} /></ExternalLink>
         <p className="role">{t.profile}</p>
         <p className="bio">{t.bio}</p>
         <div className="profile-meta">
-          <span><MapPin size={15} />{t.location}</span>
-          <span><Code2 size={15} />{profile.specialty}</span>
+          <span><Icon name="map-pin" size={15} />{t.location}</span>
+          <span><Icon name="code" size={15} />{profile.specialty}</span>
         </div>
         <div className="profile-divider" />
         <div className="profile-bottom">
@@ -38,7 +37,7 @@ export default function ProfileSidebar() {
             ))}
           </div>
           <button className="copy-button" onClick={() => copy(primarySocial.url)} aria-label={t.copy} title={t.copy}>
-            {status === 'success' ? <Check size={17} /> : <Copy size={17} />}
+            {status === 'success' ? <Icon name="check" size={17} /> : <Icon name="copy" size={17} />}
           </button>
         </div>
         <span className="copy-feedback" role="status">{status === 'success' ? t.copied : status === 'error' ? t.copyError : ''}</span>

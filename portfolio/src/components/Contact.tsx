@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react'
+import Icon from './common/Icon'
 import { usePortfolio } from '../context/PortfolioContext'
 import SpringLink from './motion/SpringLink'
 import FloatingAccent from './motion/FloatingAccent'
@@ -11,7 +11,7 @@ export default function Contact() {
       <div>
         <span className="eyebrow">{data.sections.contact.eyebrow}</span>
         <h2>{t.connection}</h2>
-        <SpringLink href={contactSocial.url}>{t.talk}<ArrowUpRight size={18} /></SpringLink>
+        <SpringLink href={contactSocial.url}>{t.talk}<Icon name="arrow-up-right" size={18} /></SpringLink>
       </div>
     </section>
   )
